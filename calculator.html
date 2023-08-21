@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body{
+            background-image: url(D:\HTMLStudy/calculator.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        h1{
+            color:darkred;
+            font-size: 50px;
+            margin-left: 30px;
+        }
+        input[type="number"]{
+            border-radius: 10px;
+            padding:10px;
+            margin:20px;
+            box-shadow: 3px 3px;
+        }
+        .add,.sub,.mul,.div{
+            border-radius: 20px;
+            padding:15px;
+            margin:15px;
+            background-color:lightyellow;
+            box-shadow: 1px 1px;
+            font-size: 15px;
+        }
+        div{
+            margin-top: 200px;
+            margin-left: 450px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function sum(){
+            let a=Number(document.getElementById("n1").value);
+            let b=Number(document.getElementById("n2").value);
+            let ans=a+b;
+            document.getElementById("ans").value=ans;
+        }
+        function subtract(){
+            let a=Number(document.getElementById("n1").value);
+            let b=Number(document.getElementById("n2").value);
+            let ans=a-b;
+            document.getElementById("ans").value=ans;
+        }
+        function multiply(){
+            let a=Number(document.getElementById("n1").value);
+            let b=Number(document.getElementById("n2").value);
+            let ans=a*b;
+            document.getElementById("ans").value=ans;
+        }
+        function divide(){
+            let a=Number(document.getElementById("n1").value);
+            let b=Number(document.getElementById("n2").value);
+            let ans=a/b;
+            document.getElementById("ans").value=ans;
+        }
+        
+    </script>
+    <div>
+        <h1>Simple Calculator</h1>
+        <input type="number" placeholder="num1" id="n1">
+        <input type="number" placeholder="num2" id="n2"><br><br>
+        <button class="add" onclick="sum()">Add</button>
+        <button class="sub" onclick="subtract()">Subtract</button>
+        <button class="mul" onclick="multiply()">Multiply</button>
+        <button class="div" onclick="divide()">Division</button><br><br>
+        <input type="number" placeholder="answer" id="ans">
+    </div>
+</body>
+</html>
